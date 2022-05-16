@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2018-11-14T13:43:01-08:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The subgroup lattices of cyclic groups</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\def\Z{\mathbb{Z}}
+\def\zn{\mathbb{Z}_n}
+\def\znc{\mathbb{Z}_n^\times}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\C{\mathbb{C}}
+\def\N{\mathbb{N}}
+\def\M{\mathbb{M}}
+\def\G{\mathcal{G}}
+\def\0{\mathbf 0}
+\def\Gdot{\langle G, \cdot\,\rangle}
+\def\phibar{\overline{\phi}}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\Ker}{Ker}
+\def\siml{\sim_L}
+\def\simr{\sim_R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="fsaa.html"><span class="title">First-Semester Abstract Algebra</span><span class="subtitle">A Structural Approach</span></a></h1>
+<p class="byline">Jessica K. Sklar</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="cycintro.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="cyc.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-6.html" title="Next" alt="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="cycintro.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="cyc.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="exercises-6.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+<h2 class="link"><a href="pre.html" data-scroll="pre"><span class="codenumber">1</span><span class="title">Preliminaries</span></a></h2>
+<ul>
+<li><a href="sets.html" data-scroll="sets">Sets</a></li>
+<li><a href="funcs.html" data-scroll="funcs">Functions</a></li>
+<li><a href="card.html" data-scroll="card">Cardinality</a></li>
+<li><a href="exercises-1.html" data-scroll="exercises-1">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="gps.html" data-scroll="gps"><span class="codenumber">2</span><span class="title">Groups</span></a></h2>
+<ul>
+<li><a href="binops.html" data-scroll="binops">Binary operations and structures</a></li>
+<li><a href="exercises-2.html" data-scroll="exercises-2">Exercises, Part I</a></li>
+<li><a href="gpdef.html" data-scroll="gpdef">The definition of a group</a></li>
+<li><a href="gpexs1.html" data-scroll="gpexs1">Examples of groups/nongroups, Part I</a></li>
+<li><a href="gpconvs.html" data-scroll="gpconvs">Group conventions and properties</a></li>
+<li><a href="gpexs2.html" data-scroll="gpexs2">Examples of groups/nongroups, Part II</a></li>
+<li><a href="summariesofgps.html" data-scroll="summariesofgps">Summaries of groups we've seen</a></li>
+<li><a href="exercises-3.html" data-scroll="exercises-3">Exercises, Part II</a></li>
+</ul>
+<h2 class="link"><a href="homoiso.html" data-scroll="homoiso"><span class="codenumber">3</span><span class="title">Homomorphisms and Isomorphisms</span></a></h2>
+<ul>
+<li><a href="smallordergps.html" data-scroll="smallordergps">Groups of small order</a></li>
+<li><a href="homosandisos.html" data-scroll="homosandisos">Definitions of Homomorphisms and Isomorphisms</a></li>
+<li><a href="isomorphicgps.html" data-scroll="isomorphicgps">Isomorphic groups</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="subgps.html" data-scroll="subgps"><span class="codenumber">4</span><span class="title">Subgroups</span></a></h2>
+<ul>
+<li><a href="subgpsintro.html" data-scroll="subgpsintro">Introduction to subgroups</a></li>
+<li><a href="subgppfsandlattices.html" data-scroll="subgppfsandlattices">Subgroup proofs and lattices</a></li>
+<li><a href="exercises-5.html" data-scroll="exercises-5">Exercises</a></li>
+</ul>
+<h2 class="link active"><a href="cyc.html" data-scroll="cyc"><span class="codenumber">5</span><span class="title">Cyclic Groups</span></a></h2>
+<ul>
+<li><a href="cycintro.html" data-scroll="cycintro">Introduction to cyclic groups</a></li>
+<li><a href="cyclattices.html" data-scroll="cyclattices" class="active">The subgroup lattices of cyclic groups</a></li>
+<li><a href="exercises-6.html" data-scroll="exercises-6">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="perm.html" data-scroll="perm"><span class="codenumber">6</span><span class="title">Permutation and Dihedral Groups</span></a></h2>
+<ul>
+<li><a href="permutationgps.html" data-scroll="permutationgps">Introduction to permutation groups</a></li>
+<li><a href="section-18.html" data-scroll="section-18">Symmetric groups</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Alternating groups</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Cayley's Theorem</a></li>
+<li><a href="dihedralgps.html" data-scroll="dihedralgps">Dihedral groups</a></li>
+<li><a href="exercises-7.html" data-scroll="exercises-7">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="coslag.html" data-scroll="coslag"><span class="codenumber">7</span><span class="title">The Wonderful World of Cosets</span></a></h2>
+<ul>
+<li><a href="section-22.html" data-scroll="section-22">Partitions of and equivalence relations on sets</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Introduction to cosets and normal subgroups</a></li>
+<li><a href="section-24.html" data-scroll="section-24">The index of a subgroup and Lagrange's Theorem</a></li>
+<li><a href="exercises-8.html" data-scroll="exercises-8">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="factorgps.html" data-scroll="factorgps"><span class="codenumber">8</span><span class="title">Factor Groups</span></a></h2>
+<ul>
+<li><a href="section-25.html" data-scroll="section-25">Motivation</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Focusing on normal subgroups</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Introduction to factor groups</a></li>
+<li><a href="exercises-9.html" data-scroll="exercises-9">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="isothms.html" data-scroll="isothms"><span class="codenumber">9</span><span class="title">The Isomorphism Theorems</span></a></h2>
+<ul>
+<li><a href="section-28.html" data-scroll="section-28">The First Isomorphism Theorem</a></li>
+<li><a href="section-29.html" data-scroll="section-29">The Second and Third Isomorphism Theorems</a></li>
+<li><a href="exercises-10.html" data-scroll="exercises-10">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
+<li><a href="appendix-2.html" data-scroll="appendix-2">Solutions to Exercises</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="references-1.html" data-scroll="references-1">Bibliography</a></li>
+<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="cyclattices"><header title="Section 5.2 The subgroup lattices of cyclic groups"><h1 class="heading hide-type" alt="Section 5.2 The subgroup lattices of cyclic groups">
+<span class="type">Section</span><span class="codenumber">5.2</span><span class="title">The subgroup lattices of cyclic groups</span><a href="cyclattices.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-695">We now explore the subgroups of cyclic groups. A complete proof of the following theorem is provided on p. 61 of [1].</p>
+<article class="theorem-like" id="subc"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">5.2.1</span>
+</h5>
+<p id="p-696">Every subgroup of a cyclic group is cyclic.</p></article><p id="p-697"><!--Style me with CSS--><em>Sketch of proof:</em> Let \(G=\langle a\rangle\) and \(H\leq G\text{.}\) If \(H=\{e\}\text{,}\) then clearly \(H\) is cyclic. Else, there exists an element \(a^i\) in \(H\) with \(i&gt;0\text{;}\) let \(d\) be the least positive integer such that \(a^d\in H\text{.}\) It turns out that \(H=\langle a^d\rangle\text{.}\)</p>
+<article class="theorem-like" id="corollary-5"><h5 class="heading">
+<span class="type">Corollary</span><span class="codenumber">5.2.2</span>
+</h5>
+<p id="p-698">Every subgroup of \(\Z\) is of the form \(n\Z\) for \(n\in \Z\text{.}\) (Note that \(n\Z\simeq \Z\) unless \(n=0\text{.}\))</p></article><p id="p-699">Really, it suffices to study the subgroups of \(\Z\) and \(\Z_n\) to understand the subgroup lattice of every cyclic group.</p>
+<p id="p-700">We provide the following theorems without proof.</p>
+<article class="theorem-like" id="znsubgps"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">5.2.3</span>
+</h5>
+<p id="p-701">The nontrivial subgroups of \(\Z_n\) are exactly those of the form \(\langle d\rangle\text{,}\) where \(d\) is a positive divisor of \(n\text{.}\) Note that</p>
+\begin{equation*}
+|\langle d\rangle |=n/d
+\end{equation*}
+<p>for each such \(d\text{.}\)</p></article><article class="theorem-like" id="theorem-33"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">5.2.4</span>
+</h5>
+<p id="p-702">For each \(0\neq a\in \Z_n\text{,}\)</p>
+\begin{equation*}
+\langle a\rangle =\left\langle \frac{n}{\gcd(n,a)}\right\rangle.
+\end{equation*}
+<p>It follows that for each \(0\neq a \in \Z_n,\)</p>
+\begin{equation*}
+|\langle a\rangle |=\frac{n}{\gcd(n,a)}.
+\end{equation*}
+</article><p id="p-703">In fact:</p>
+<article class="theorem-like" id="theorem-34"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">5.2.5</span>
+</h5>
+<p id="p-704">\(\Z_n\) has a unique subgroup of order \(k\text{,}\) for each positive divisor \(k\) of \(n\text{.}\)</p></article><article class="example-like" id="example-47"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">5.2.6</span>
+</h5>
+<p id="p-705">How many subgroups does \(\Z_{18}\) have? What are the generators of \(\Z_{15}\text{?}\)</p>
+<p id="p-706">Well, the positive divisors of \(18\) are \(1,2,3,6,9,\) and \(18\text{,}\) so \(\Z_{18}\) has exactly six subgroups (namely, \(\langle 1\rangle\text{,}\) \(\langle 2\rangle\text{,}\) etc.). The generators of \(\Z_{15}\) are the elements of \(\Z_{15}\) that are relatively prime to \(15\text{,}\) namely \(1,2,4,7,8,11,13,\) and \(14\text{.}\)</p></article><article class="example-like" id="example-48"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">5.2.7</span>
+</h5>
+<p id="p-707">Draw a subgroup lattice for \(\Z_{12}\text{.}\)</p>
+<p id="p-708">The positive divisors of \(12\) are \(1,2,3,4,6,\) and \(12\text{;}\) so \(\Z_{12}\)'s subgroups are of the form \(\langle 1\rangle\text{,}\) \(\langle 2\rangle\text{,}\) etc. So \(\Z_{12}\) has the following subgroup lattice.</p>
+<div class="sidebyside" style="" id="sidebyside-11"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/image-4.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div></div></div></article></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>

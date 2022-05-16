@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2018-11-26T21:58:26-08:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Dihedral groups</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\def\Z{\mathbb{Z}}
+\def\zn{\mathbb{Z}_n}
+\def\znc{\mathbb{Z}_n^\times}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\C{\mathbb{C}}
+\def\N{\mathbb{N}}
+\def\M{\mathbb{M}}
+\def\G{\mathcal{G}}
+\def\0{\mathbf 0}
+\def\Gdot{\langle G, \cdot\,\rangle}
+\def\phibar{\overline{\phi}}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\Ker}{Ker}
+\def\siml{\sim_L}
+\def\simr{\sim_R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="fsaa.html"><span class="title">First-Semester Abstract Algebra</span><span class="subtitle">A Structural Approach</span></a></h1>
+<p class="byline">Jessica K. Sklar</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="cayleysthm.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="perm.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-7.html" title="Next" alt="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="cayleysthm.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="perm.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="exercises-7.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+<h2 class="link"><a href="pre.html" data-scroll="pre"><span class="codenumber">1</span><span class="title">Preliminaries</span></a></h2>
+<ul>
+<li><a href="sets.html" data-scroll="sets">Sets</a></li>
+<li><a href="funcs.html" data-scroll="funcs">Functions</a></li>
+<li><a href="card.html" data-scroll="card">Cardinality</a></li>
+<li><a href="exercises-1.html" data-scroll="exercises-1">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="gps.html" data-scroll="gps"><span class="codenumber">2</span><span class="title">Groups</span></a></h2>
+<ul>
+<li><a href="binops.html" data-scroll="binops">Binary operations and structures</a></li>
+<li><a href="exercises-2.html" data-scroll="exercises-2">Exercises, Part I</a></li>
+<li><a href="gpdef.html" data-scroll="gpdef">The definition of a group</a></li>
+<li><a href="gpexs1.html" data-scroll="gpexs1">Examples of groups/nongroups, Part I</a></li>
+<li><a href="gpconvs.html" data-scroll="gpconvs">Group conventions and properties</a></li>
+<li><a href="gpexs2.html" data-scroll="gpexs2">Examples of groups/nongroups, Part II</a></li>
+<li><a href="summariesofgps.html" data-scroll="summariesofgps">Summaries of groups we've seen</a></li>
+<li><a href="exercises-3.html" data-scroll="exercises-3">Exercises, Part II</a></li>
+</ul>
+<h2 class="link"><a href="homoiso.html" data-scroll="homoiso"><span class="codenumber">3</span><span class="title">Homomorphisms and Isomorphisms</span></a></h2>
+<ul>
+<li><a href="smallordergps.html" data-scroll="smallordergps">Groups of small order</a></li>
+<li><a href="homosandisos.html" data-scroll="homosandisos">Definitions of Homomorphisms and Isomorphisms</a></li>
+<li><a href="isomorphicgps.html" data-scroll="isomorphicgps">Isomorphic groups</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="subgps.html" data-scroll="subgps"><span class="codenumber">4</span><span class="title">Subgroups</span></a></h2>
+<ul>
+<li><a href="subgpsintro.html" data-scroll="subgpsintro">Introduction to subgroups</a></li>
+<li><a href="subgppfsandlattices.html" data-scroll="subgppfsandlattices">Subgroup proofs and lattices</a></li>
+<li><a href="exercises-5.html" data-scroll="exercises-5">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="cyc.html" data-scroll="cyc"><span class="codenumber">5</span><span class="title">Cyclic Groups</span></a></h2>
+<ul>
+<li><a href="cycintro.html" data-scroll="cycintro">Introduction to cyclic groups</a></li>
+<li><a href="cyclattices.html" data-scroll="cyclattices">The subgroup lattices of cyclic groups</a></li>
+<li><a href="exercises-6.html" data-scroll="exercises-6">Exercises</a></li>
+</ul>
+<h2 class="link active"><a href="perm.html" data-scroll="perm"><span class="codenumber">6</span><span class="title">Permutation and Dihedral Groups</span></a></h2>
+<ul>
+<li><a href="permutationgps.html" data-scroll="permutationgps">Introduction to permutation groups</a></li>
+<li><a href="symmgps.html" data-scroll="symmgps">Symmetric groups</a></li>
+<li><a href="altgps.html" data-scroll="altgps">Alternating groups</a></li>
+<li><a href="cayleysthm.html" data-scroll="cayleysthm">Cayley's Theorem</a></li>
+<li><a href="dihedralgps.html" data-scroll="dihedralgps" class="active">Dihedral groups</a></li>
+<li><a href="exercises-7.html" data-scroll="exercises-7">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="coslag.html" data-scroll="coslag"><span class="codenumber">7</span><span class="title">The Wonderful World of Cosets</span></a></h2>
+<ul>
+<li><a href="section-22.html" data-scroll="section-22">Partitions of and equivalence relations on sets</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Introduction to cosets and normal subgroups</a></li>
+<li><a href="section-24.html" data-scroll="section-24">The index of a subgroup and Lagrange's Theorem</a></li>
+<li><a href="exercises-8.html" data-scroll="exercises-8">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="factorgps.html" data-scroll="factorgps"><span class="codenumber">8</span><span class="title">Factor Groups</span></a></h2>
+<ul>
+<li><a href="section-25.html" data-scroll="section-25">Motivation</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Focusing on normal subgroups</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Introduction to factor groups</a></li>
+<li><a href="exercises-9.html" data-scroll="exercises-9">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="isothms.html" data-scroll="isothms"><span class="codenumber">9</span><span class="title">The Isomorphism Theorems</span></a></h2>
+<ul>
+<li><a href="section-28.html" data-scroll="section-28">The First Isomorphism Theorem</a></li>
+<li><a href="section-29.html" data-scroll="section-29">The Second and Third Isomorphism Theorems</a></li>
+<li><a href="exercises-10.html" data-scroll="exercises-10">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
+<li><a href="appendix-2.html" data-scroll="appendix-2">Solutions to Exercises</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="references-1.html" data-scroll="references-1">Bibliography</a></li>
+<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="dihedralgps"><header title="Section 6.5 Dihedral groups"><h1 class="heading hide-type" alt="Section 6.5 Dihedral groups">
+<span class="type">Section</span><span class="codenumber">6.5</span><span class="title">Dihedral groups</span><a href="dihedralgps.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-873">Dihedral groups are groups of symmetries of regular \(n\)-gons. We start with an example.</p>
+<article class="example-like" id="D3"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">6.5.1</span>
+</h5>
+<p id="p-874">Consider a regular triangle \(T\text{,}\) with vertices labeled \(1\text{,}\) \(2\text{,}\) and \(3\text{.}\) We show \(T\) below, also using dotted lines to indicate a vertical line of symmetry of \(T\) and a rotation of \(T\text{.}\)</p>
+<div class="sidebyside" style="" id="sidebyside-13"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/image-6.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div></div></div>
+<p id="p-875">Note that if we reflect \(T\) over the vertical dotted line (indicated in the picture by \(f\)), \(T\) maps onto itself, with \(1\) mapping to \(1\text{,}\) and \(2\) and \(3\) mapping to each other. Similarly, if we rotate \(T\) clockwise by \(120^{\circ}\) (indicated in the picture by \(r\)), \(T\) again maps onto itself, this time with \(1\) mapping to \(2\text{,}\) \(2\) mapping to \(3\text{,}\) and \(3\) mapping to \(1\text{.}\) Both of these maps are called <!--Style me with CSS--><em>symmetries</em> of \(T\text{;}\) \(f\) is a <!--Style me with CSS--><em>reflection</em> or <!--Style me with CSS--><em>flip</em> and \(r\) is a <!--Style me with CSS--><em>rotation</em>.</p>
+<p id="p-876">Of course, these are not the only symmetries of \(T\text{.}\) If we compose two symmetries of \(T\text{,}\) we obtain a symmetry of \(T\text{:}\) for instance, if we apply the map \(f\circ r\) to \(T\) (meaning first do \(r\text{,}\) then do \(f\)) we obtain reflection over the line connecting \(2\) to the midpoint of line segment \(\overline{13}\text{.}\) Similarly, if we apply the map \(f\circ (r\circ r)\) to \(T\) (first do \(r\) twice, then do \(f\)) we obtain reflection over the line connecting \(3\) to the midpoint of line segment \(\overline{12}\text{.}\) In fact, every symmetry of \(T\) can be obtained by composing applications of \(f\) and applications of \(r\text{.}\)</p>
+<p id="p-877">For convenience of notation, we omit the composition symbols, writing, for instance, \(fr\) for \(f\circ r\text{,}\) \(r\circ r\) as \(r^2\text{,}\) etc. It turns out there are exactly six symmetries of \(T\text{,}\) namely: </p>
+<ol id="ol-80" style="list-style-type: decimal;">
+<li id="li-344"><p id="p-878">the map \(e\) from \(T\) to \(T\) sending every element to itself;</p></li>
+<li id="li-345"><p id="p-879">\(f\) (that is, reflection over the line connecting \(1\) and the midpoint of \(\overline{23}\));</p></li>
+<li id="li-346"><p id="p-880">\(r\) (that is, clockwise rotation by \(120^{\circ}\));</p></li>
+<li id="li-347"><p id="p-881">\(r^2\) (that is, clockwise rotation by \(240^{\circ}\));</p></li>
+<li id="li-348"><p id="p-882">\(fr\) (that is, reflection over the line connecting \(2\) and the midpoint of \(\overline{13}\)); and</p></li>
+<li id="li-349"><p id="p-883">\(fr^2\) (that is, reflection over the line connecting \(3\) and the midpoint of \(\overline{12}\)).</p></li>
+</ol>
+<p id="p-884">Declaring that \(f^0=r^0=e\text{,}\) the set</p>
+\begin{equation*}
+D_3=\{e, f, r, r^2, fr, fr^2\}=\{f^ir^j:i=0,1, j=0,1,2\}
+\end{equation*}
+<p>is the collection of all symmetries of \(T\text{.}\)</p></article><article class="remark-like" id="remark-32"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">6.5.2</span>
+</h5>
+<p id="p-885">Notice that \(rf=fr^2\) and that \(f^2=r^3=e\text{.}\)</p></article><article class="theorem-like" id="di3"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">6.5.3</span>
+</h5>
+<p id="p-886">\(D_3\) is a group under composition.</p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-35" id="proof-35"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-35" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-887">First, as noted above, \(rf=fr^2\text{.}\) So any map of the form \(f^ir^jf^kr^l\) (\(i,k=0,1\text{,}\) \(j,l=0,1,2\)) can be written in the form \(f^sr^t\) for some \(s,t \in \N\text{.}\) Finally, let \(R_2(s)\) and \(R_3(t)\) be the remainders when you divide \(s\) by \(2\) and \(t\) by \(3\text{;}\) then \(f^sr^t=f^{R_2(s)}r^{R_3(t)} \in D_3\text{.}\) So \(\langle D_3,\circ\rangle \) is a binary structure.</p>
+<p id="p-888">Next, function composition is always associative, and the function \(e\) clearly acts as identity element in \(D_3\text{.}\) Finally, let \(x=f^ir^j\in D_3\text{.}\) Then \(y=r^{3-j}f^{2-i}\) is in \(D_3\) with \(xy=yx=e\text{.}\) So \(D_3\) is a group.</p></article></span>
+</div>
+<p id="p-889"> Let us look at \(D_3\) another way. Note that each map in \(D_3\) can be uniquely described by how it permutes the vertices \(1,2,3\) of \(T\text{:}\) that is, each map in \(D_3\) can be uniquely identified with a unique element of \(S_3\text{.}\) For instance, \(f\) corresponds to the permutation \((23)\) in \(S_3\text{,}\) while \(fr\) corresponds to the permutation \((13)\text{.}\) In turns out that \(D_3 \simeq S_3\text{,}\) via the following correspondence.</p>
+<div class="sidebyside" style="" id="sidebyside-14"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(e\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(\mapsto\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(e\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(f\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(\mapsto\)</td>
+<td class="c m b0 r0 l0 t0 lines">\((23)\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(r\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(\mapsto\)</td>
+<td class="c m b0 r0 l0 t0 lines">\((123)\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(r^2\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(\mapsto\)</td>
+<td class="c m b0 r0 l0 t0 lines">\((132)\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(fr\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(\mapsto\)</td>
+<td class="c m b0 r0 l0 t0 lines">\((13)\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(fr^2\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(\mapsto\)</td>
+<td class="c m b0 r0 l0 t0 lines">\((12)\)</td>
+</tr>
+</table></div></div></div>
+<p id="p-890">The group \(D_3\) is an example of class of groups called <!--Style me with CSS--><em>dihedral groups</em>.</p>
+<article class="definition-like" id="definition-54"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">6.5.4</span>
+</h5>
+<p id="p-891">Let \(n\) be an integer greater than or equal to \(3\text{.}\) We let \(D_n\) be the collection of symmetries of the regular \(n\)-gon. It turns out that \(D_n\) is a group (see below), called the <em class="terminology">dihedral group of order \(2n\)</em>. (Note: Some books and mathematicians instead denote the group of symmetries of the regular \(n\)-gon by \(D_{2n}\)—so, for instance, our \(D_3\text{,}\) above, would instead be called \(D_6\text{.}\) Make sure you are aware of the convention your book or colleague is using.)</p></article><article class="theorem-like" id="rf"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">6.5.5</span>
+</h5>
+<p id="p-892">Let \(n\) be an integer greater than or equal to \(3\text{.}\) Then, again using the convention that \(f^0=r^0=e\text{,}\) \(D_n\) can be uniquely described as</p>
+\begin{equation*}
+D_n=\{f^ir^j: i=0,1, j=0,1,\ldots, n-1\}
+\end{equation*}
+<p>with the relations</p>
+\begin{equation*}
+rf=fr^{n-1} \text{ and }  f^2=r^n=e.
+\end{equation*}
+<p id="p-893">The dihedral group \(D_n\) is a nonabelian group of order \(2n\text{.}\)</p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-36" id="proof-36"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-36" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-894">The proof that \(D_n\) is a group parallels the proof, above, that \(D_3\) is a group. It is clear that \(D_n\) is nonabelian (e.g., \(rf=fr^{n-1}\neq fr\)) and has order \(2n\text{.}\)</p></article></span>
+</div>
+<article class="remark-like" id="remark-33"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">6.5.6</span>
+</h5>
+<p id="p-895">Throughout this course, if we are discussing a group \(D_n\) you should assume \(n\in \Z^+\text{,}\) \(n\geq 3\text{,}\) unless otherwise noted.</p></article><article class="definition-like" id="definition-55"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">6.5.7</span>
+</h5>
+<p id="p-896">We say that an element of \(D_n\) is written in <em class="terminology">standard form</em> if it is written in the form \(f^ir^j\) where \(i\in \{0,1\}\) and \(j\in \{0,1,\ldots,n-1\}\text{.}\)</p></article><article class="theorem-like" id="theorem-44"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">6.5.8</span>
+</h5>
+<p id="p-897">Each \(D_n\) is isomorphic to a subgroup of \(S_n\text{.}\)</p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-37" id="proof-37"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-37" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-898">We provide here a sketch of a proof; the details are left as an exercise for the reader. We described above how \(D_3\) is isomorphic to a subgroup (namely, the improper subgroup) of \(S_3\text{.}\) One can show that each \(D_n\) is isomorphic to a subgroup of \(S_n\) by similarly labeling the vertices of the regular \(n\)-gon \(1,2,\ldots, n\) and determining how these vertices are permuted by each element of \(D_n\text{.}\)</p></article></span>
+</div>
+<article class="remark-like" id="warning-19"><h5 class="heading">
+<span class="type">Warning</span><span class="codenumber">6.5.9</span>
+</h5>
+<p id="p-899">While \(D_3\) is actually isomorphic to \(S_3\) itself, for \(n&gt;3\) we have that \(D_n\) is <!--Style me with CSS--><em>not</em> isomorphic to \(S_n\) but is rather isomorphic to a <!--Style me with CSS--><em>proper subgroup</em> of \(S_n\text{.}\) When \(n&gt;3\) you can see that \(D_n\) cannot be isomorphic to \(S_n\) since \(|D_n|=2n \lt  n! = |S_n|\) for \(n&gt;3\text{.}\)</p></article><p id="p-900">It is important to be able to do computations with specific elements of dihedral groups. We have the following theorem.</p>
+<article class="theorem-like" id="diords"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">6.5.10</span>
+</h5>
+<p id="p-901">The following relations hold in \(D_n\text{,}\) for every \(n\text{:}\) </p>
+<ol id="ol-81" style="list-style-type: decimal;">
+<li id="li-350"><p id="p-902">For every \(i\text{,}\) \(r^if=fr^{-i}\) (in particular, \(rf=fr^{-1}=fr^{n-1}\));</p></li>
+<li id="li-351"><p id="p-903">\(o(fr^i)=2\) for every \(i\) (in particular, \(f^2=e\));</p></li>
+<li id="li-352"><p id="p-904">\(o(r)=o(r^{-1})=n\text{;}\)</p></li>
+<li id="li-353"><p id="p-905">If \(n\) is even, then \(r^{n/2}\) commutes with every element of \(D_n\text{.}\)</p></li>
+</ol></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-38" id="proof-38"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-38" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-906"></p>
+<ol id="ol-82" style="list-style-type: decimal;">
+<li id="li-354">
+<p id="p-907">We use induction on the exponent of \(r\text{.}\) We already know that \(r^1f=fr^{-1}\text{.}\)  Now suppose \(r^{i-1}f=fr^{-(i-1)}\) for some \(i\geq 2\text{.}\)  Then</p>
+\begin{equation*}
+r^if=r(r^{i-1}f)=r(fr^{-(i-1)})=(rf)r^{-i+1}=(fr^{-1})r^{-i+1}=fr^{-i}.
+\end{equation*}
+</li>
+<li id="li-355">
+<p id="p-908">For every \(i\text{,}\) \(fr^i\neq e\text{,}\) but</p>
+\begin{equation*}
+(fr^i)^2=(fr^i)(fr^i)=f(r^if)r^i=f(fr^{-i})r^i=f^2r^0=e.
+\end{equation*}
+</li>
+<li id="li-356"><p id="p-909">This follows from Theorem 5.1.13 and the fact that \(o(r)=n\text{.}\)</p></li>
+<li id="li-357"><p id="p-910">The proof of this statement is left as an exercise for the reader.</p></li>
+</ol></article></span>
+</div>
+<article class="example-like" id="example-62"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">6.5.11</span>
+</h5>
+<p id="p-911"></p>
+<ol id="ol-83" style="list-style-type: decimal;">
+<li id="li-358"><p id="p-912">Write \(fr^2f\) in \(D_3\) in standard form.  Do the same for \(fr^2f\) in \(D_4\text{.}\)</p></li>
+<li id="li-359"><p id="p-913">What is the inverse of \(fr^3\) in \(D_5\text{?}\)  Write it in standard form.</p></li>
+<li id="li-360"><p id="p-914">Explicitly describe an isomorphism from \(D_4\) to a subgroup of \(S_4\text{.}\)</p></li>
+</ol></article><article class="example-like" id="example-63"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">6.5.12</span>
+</h5>
+<p id="p-915">Classify the following groups up to isomorphism. (<!--Style me with CSS--><em>Hint:</em> You may want to look at the number of group elements that have a specific finite order.)</p>
+\begin{equation*}
+\Z, \Z_6, \Z_2, S_6, \Z_4, \Q, 3\Z, \R, S_2, \R^*, S_3,\Q^*, \C^*, \langle \pi\rangle \text{ in } \R^*,
+\end{equation*}
+
+\begin{equation*}
+D_6, 
+\langle (134)(25)\rangle \text{ in } S_5, \R^+, D_3, \langle r \rangle \text{ in } D_4, 17\Z
+\end{equation*}
+</article></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>
