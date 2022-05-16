@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2018-11-03T08:39:48-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Partitions of and equivalence relations on sets</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\def\Z{\mathbb{Z}}
+\def\zn{\mathbb{Z}_n}
+\def\znc{\mathbb{Z}_n^\times}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\C{\mathbb{C}}
+\def\N{\mathbb{N}}
+\def\M{\mathbb{M}}
+\def\G{\mathcal{G}}
+\def\0{\mathbf 0}
+\def\Gdot{\langle G, \cdot\,\rangle}
+\def\phibar{\overline{\phi}}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\Ker}{Ker}
+\def\siml{\sim_L}
+\def\simr{\sim_R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="fsaa.html"><span class="title">First-Semester Abstract Algebra</span><span class="subtitle">A Structural Approach</span></a></h1>
+<p class="byline">Jessica K. Sklar</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="coslag.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="coslag.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-23.html" title="Next" alt="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="coslag.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="coslag.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-23.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+<h2 class="link"><a href="pre.html" data-scroll="pre"><span class="codenumber">1</span><span class="title">Preliminaries</span></a></h2>
+<ul>
+<li><a href="sets.html" data-scroll="sets">Sets</a></li>
+<li><a href="funcs.html" data-scroll="funcs">Functions</a></li>
+<li><a href="card.html" data-scroll="card">Cardinality</a></li>
+<li><a href="exercises-1.html" data-scroll="exercises-1">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="gps.html" data-scroll="gps"><span class="codenumber">2</span><span class="title">Groups</span></a></h2>
+<ul>
+<li><a href="binops.html" data-scroll="binops">Binary operations and structures</a></li>
+<li><a href="exercises-2.html" data-scroll="exercises-2">Exercises, Part I</a></li>
+<li><a href="gpdef.html" data-scroll="gpdef">The definition of a group</a></li>
+<li><a href="gpexs1.html" data-scroll="gpexs1">Examples of groups/nongroups, Part I</a></li>
+<li><a href="gpconvs.html" data-scroll="gpconvs">Group conventions and properties</a></li>
+<li><a href="gpexs2.html" data-scroll="gpexs2">Examples of groups/nongroups, Part II</a></li>
+<li><a href="summariesofgps.html" data-scroll="summariesofgps">Summaries of groups we've seen</a></li>
+<li><a href="exercises-3.html" data-scroll="exercises-3">Exercises, Part II</a></li>
+</ul>
+<h2 class="link"><a href="homoiso.html" data-scroll="homoiso"><span class="codenumber">3</span><span class="title">Homomorphisms and Isomorphisms</span></a></h2>
+<ul>
+<li><a href="smallordergps.html" data-scroll="smallordergps">Groups of small order</a></li>
+<li><a href="homosandisos.html" data-scroll="homosandisos">Definitions of Homomorphisms and Isomorphisms</a></li>
+<li><a href="isomorphicgps.html" data-scroll="isomorphicgps">Isomorphic groups</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="subgps.html" data-scroll="subgps"><span class="codenumber">4</span><span class="title">Subgroups</span></a></h2>
+<ul>
+<li><a href="subgpsintro.html" data-scroll="subgpsintro">Introduction to subgroups</a></li>
+<li><a href="subgppfsandlattices.html" data-scroll="subgppfsandlattices">Subgroup proofs and lattices</a></li>
+<li><a href="exercises-5.html" data-scroll="exercises-5">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="cyc.html" data-scroll="cyc"><span class="codenumber">5</span><span class="title">Cyclic Groups</span></a></h2>
+<ul>
+<li><a href="cycintro.html" data-scroll="cycintro">Introduction to cyclic groups</a></li>
+<li><a href="section-16.html" data-scroll="section-16">The subgroup lattices of cyclic groups</a></li>
+<li><a href="exercises-6.html" data-scroll="exercises-6">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="perm.html" data-scroll="perm"><span class="codenumber">6</span><span class="title">Permutation and Dihedral Groups</span></a></h2>
+<ul>
+<li><a href="permutationgps.html" data-scroll="permutationgps">Introduction to permutation groups</a></li>
+<li><a href="section-18.html" data-scroll="section-18">Symmetric groups</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Alternating groups</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Cayley's Theorem</a></li>
+<li><a href="dihedralgps.html" data-scroll="dihedralgps">Dihedral groups</a></li>
+<li><a href="exercises-7.html" data-scroll="exercises-7">Exercises</a></li>
+</ul>
+<h2 class="link active"><a href="coslag.html" data-scroll="coslag"><span class="codenumber">7</span><span class="title">The Wonderful World of Cosets</span></a></h2>
+<ul>
+<li><a href="section-22.html" data-scroll="section-22" class="active">Partitions of and equivalence relations on sets</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Introduction to cosets and normal subgroups</a></li>
+<li><a href="section-24.html" data-scroll="section-24">The index of a subgroup and Lagrange's Theorem</a></li>
+<li><a href="exercises-8.html" data-scroll="exercises-8">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="factorgps.html" data-scroll="factorgps"><span class="codenumber">8</span><span class="title">Factor Groups</span></a></h2>
+<ul>
+<li><a href="section-25.html" data-scroll="section-25">Motivation</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Focusing on normal subgroups</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Introduction to factor groups</a></li>
+<li><a href="exercises-9.html" data-scroll="exercises-9">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="isothms.html" data-scroll="isothms"><span class="codenumber">9</span><span class="title">The Isomorphism Theorems</span></a></h2>
+<ul>
+<li><a href="section-28.html" data-scroll="section-28">The First Isomorphism Theorem</a></li>
+<li><a href="section-29.html" data-scroll="section-29">The Second and Third Isomorphism Theorems</a></li>
+<li><a href="exercises-10.html" data-scroll="exercises-10">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
+<li><a href="appendix-2.html" data-scroll="appendix-2">Solutions to Exercises</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="references-1.html" data-scroll="references-1">Bibliography</a></li>
+<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-22"><header title="Section 7.1 Partitions of and equivalence relations on sets"><h1 class="heading hide-type" alt="Section 7.1 Partitions of and equivalence relations on sets">
+<span class="type">Section</span><span class="codenumber">7.1</span><span class="title">Partitions of and equivalence relations on sets</span>
+</h1></header><article class="definition-like" id="definition-56"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">7.1.1</span>
+</h5>
+<p id="p-960">Let \(S\) be a set. Then a collection of subsets \(P=\{S_i\}_{i\in I}\) (where \(I\) is some index set) is a <em class="terminology">partition</em> of \(S\) if each \(S_i \neq \emptyset\) and each element of \(S\) is in exactly one \(S_i\text{.}\) In other words, \(P=\{S_i\}_{i\in I}\) is a partition of \(S\) if and only if: </p>
+<ol id="ol-89" style="list-style-type: decimal;">
+<li id="li-383"><p id="p-961">each \(S_i\neq \emptyset\text{;}\)</p></li>
+<li id="li-384"><p id="p-962">the \(S_i\) are mutually disjoint (that is, \(S_i\cap S_j =
+\emptyset\) for \(i\neq j \in I\)); and</p></li>
+<li id="li-385"><p id="p-963">\(S=\bigcup_{i\in I}S_i\text{.}\)</p></li>
+</ol>
+<p id="p-964">The \(S_i\) are called the <em class="terminology">cells</em> of the partition.</p></article><article class="example-like" id="example-64"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.1.2</span>
+</h5>
+<p id="p-965"></p>
+<ol id="ol-90" style="list-style-type: decimal;">
+<li id="li-386">
+<p id="p-966">The set \(\{1,2,3\}\) has 5 partitions: namely,</p>
+\begin{equation*}
+\{\{1,2,3\}\},\{\{1,2\},\{3\}\}, \{\{1,3\},\{2\}\},\{\{2,3\},\{1\}\} \text{ and }  \{\{1\},\{2\},\{3\}\}.
+\end{equation*}
+<p>The first partition we've mentioned has one cell, the next three have two cells, and the last one has three cells.</p>
+</li>
+<li id="li-387">
+<p id="p-967">The following is a 2-celled partition of \(\Z\text{:}\)</p>
+\begin{equation*}
+\{\{x\in \Z\,:\ x \text{
+is even} \},\{x\in \Z\,:\, x\text{ is odd} \}\}.
+\end{equation*}
+</li>
+</ol></article><p id="p-968">The number of partitions of a finite set of \(n\) elements gets large very quickly as \(n\) goes to infinity. Indeed, there are 52 partitions of a set containing just 5 elements! (The total number of partitions of an \(n\)-element set is the <!--Style me with CSS--><em>Bell number</em>, \(B_n\text{.}\) There is no trivial way of computing \(B_n\text{,}\) in general, though the \(B_n\) do satisfy the relatively simple recurrence relation</p>
+\begin{equation*}
+B_{n+1}=\sum_{k=0}^n \binom{n}{k} B_k,
+\end{equation*}
+<p>for each \(n\geq 1\text{.}\)) But our goal here is not to count the number of partitions of a given set, but rather to use particular partitions of a group \(G\) to help us study that group's structure. We turn now to our next definition.</p>
+<article class="definition-like" id="definition-57"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">7.1.3</span>
+</h5>
+<p id="p-969">Let \(S\) be a set. Then a <em class="terminology">relation</em> on \(S\) is a subset \(R\) of \(S\times S\text{.}\)<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-2" id="fn-2"><span class="footnote"><sup> 1 </sup></span></a></span><span id="hk-fn-2" style="display: none;" class="tex2jax_ignore"><span class="footnote">More generally, if \(S\) and \(T\) are sets, a <!--Style me with CSS--><em>relation between \(S\) and \(T\)</em> is a subset of \(S \times T\text{.}\) We will not, however, in our class consider the cases in which \(S\) and \(T\) are different sets.</span></span>If \(R\) is a relation on \(S\) and \(x,y\in S\text{,}\) then we say \(x\) is <em class="terminology">related to</em> \(y\text{,}\) and write \(x R y\text{,}\) if \((x,y)\in R\text{;}\) otherwise, we say that \(x\) is <em class="terminology">not related</em> to \(y\text{,}\) and write \(x \not R y\text{.}\)</p></article><article class="remark-like" id="remark-34"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">7.1.4</span>
+</h5>
+<p id="p-970">If there is a conventional notation used to denote a particular relation on a set, we will usually use that notation, rather than \(R\text{,}\) to denote the relation.</p></article><p id="p-971">We are already familiar with some relations on \(\R\text{.}\) Common such relations are \(=\text{,}\) \(\neq\text{,}\) \(\lt\text{,}\) \(\leq\text{,}\) \(&gt;\text{,}\) and \(\geq\text{;}\) they contain exactly the elements we'd expect them to contain.</p>
+<article class="example-like" id="example-65"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.1.5</span>
+</h5>
+<p id="p-972"></p>
+<ol id="ol-91" style="list-style-type: decimal;">
+<li id="li-388"><p id="p-973">\(\lt\) is a relation on \(\R\) that contains, for instance, \((3,4)\) but not \((3,3)\) or \((4,3)\text{;}\) \(\leq\) is a relation on \(\R\) that contains \((3,4)\) <!--Style me with CSS--><em>and</em> \((3,3)\) but not \((4,3)\text{.}\)</p></li>
+<li id="li-389"><p id="p-974">Given any \(n\in \Z^+\text{,}\) congruence modulo \(n\text{,}\) denoted \(\equiv_n\text{,}\) is a relation on \(\Z\text{,}\) where \(\equiv_n\) is defined to be \(\{(x,y) \in \Z
+\times \Z \,:\, n \text{ divides } x-y\}\text{.}\)</p></li>
+<li id="li-390"><p id="p-975">We can define a relation \(R\) on \(C^1\) (the set of all differentiable functions from \(\R\) to \(\R\) whose derivatives are continuous) by declaring that \((f,g)\in C^1 \times C^1\) is in \(R\) if and only if \(f'=g'\text{.}\)</p></li>
+</ol></article><article class="definition-like" id="definition-58"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">7.1.6</span>
+</h5>
+<p id="p-976">Let \(R\) be a relation on a set \(S\text{.}\) Then \(R\) is said to be: </p>
+<ul id="ul-8" style="list-style-type: disc;">
+<li id="li-391"><p id="p-977"><em class="terminology">reflexive on \(S\)</em> if \(xR x\) for every \(x\in S\text{;}\)</p></li>
+<li id="li-392"><p id="p-978"><em class="terminology">symmetric on \(S\)</em> if whenever \(x,y\in S\) with \(xR y\) we also have \(yR x\text{;}\) and</p></li>
+<li id="li-393"><p id="p-979"><em class="terminology">transitive on \(S\)</em> if whenever \(x,y,z\in S\) with \(xR y\) and \(yR z\) we also have \(xR z\text{.}\)</p></li>
+</ul>
+<p id="p-980">A relation that is reflexive, symmetric, <em class="terminology">and</em> transitive is called an <em class="terminology">equivalence relation</em>.</p>
+<p id="p-981">If we know, or plan to prove, that a relation is an equivalence relation, by convention we may denote the relation by \(\sim\text{,}\) rather than by \(R\text{.}\)</p></article><article class="remark-like" id="remark-35"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">7.1.7</span>
+</h5>
+<p id="p-982">You can think of an equivalence relation on a set \(S\) as being a “weak version” of equality on \(S\text{.}\)  Indeed, \(=\) is an equivalence relation on any set \(S\text{,}\) but it also has a very special property that most equivalence relations <!--Style me with CSS--><em>don't</em> have: namely, no element of \(S\) is related to <!--Style me with CSS--><em>any other element</em> of \(S\) under \(=\text{.}\)</p></article><article class="example-like" id="example-66"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.1.8</span>
+</h5>
+<p id="p-983"></p>
+<ol id="ol-92" style="list-style-type: decimal;">
+<li id="li-394"><p id="p-984">\(\lt\) is <!--Style me with CSS--><em>not</em> an equivalence relation on \(\R\) because it is not reflexive: for instance, \(3\not\lt  3\text{.}\) \(\leq\) is also <!--Style me with CSS--><em>not</em> an equivalence relation on \(\R\text{,}\) since even though it is reflexive, it's not symmetric: indeed, \(3\leq 4\) but \(4\not\leq 3\text{.}\)</p></li>
+<li id="li-395"><p id="p-985">Given any \(n\in \Z^+\text{,}\) \(\equiv_n\) <!--Style me with CSS--><em>is</em> an equivalence relation on \(\Z\text{.}\)  The proof of this is left as an exercise for the reader.</p></li>
+<li id="li-396"><p id="p-986">The relation \(R\) on \(C^1\) discussed above (\(fR  g\) iff \(f'=g'\)) <!--Style me with CSS--><em>is</em> an equivalence relation on \(C^1\text{.}\)</p></li>
+<li id="li-397"><p id="p-987">\(\simeq\) <!--Style me with CSS--><em>is</em> an equivalence relation on any set of groups. This follows from Theorem 3.3.3.</p></li>
+<li id="li-398"><p id="p-988">Define relation \(R\) on \(\Z\) by \(xR y\) if and only if \(xy
+\geq 0\text{.}\)  Is \(R\) an equivalence relation on \(\Z\text{?}\)  Well, for every \(x\in \Z\text{,}\) \(x^2\geq 0\text{,}\) so \(R\) is reflexive.  Moreover, if \(x,y\in
+\Z\) with \(xy \geq 0\text{,}\) then \(yx \geq 0\text{;}\) so \(R\) is symmetric.  But \(R\) is <!--Style me with CSS--><em>not</em> transitive: indeed, \(3,0,-4\in \Z\) with \(3(0)=0
+\geq 0\) and \(0(-4)=0\geq 0\text{,}\) so \(3\R 0\) and \(0 R -4\text{;}\) but \(3(-4)=-12 \not \geq 0\text{.}\)  So \(R\) isn't transitive, and hence is <!--Style me with CSS--><em>not</em> an equivalence relation.</p></li>
+</ol></article><article class="definition-like" id="definition-59"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">7.1.9</span>
+</h5>
+<p id="p-989">Given an equivalence relation \(\sim\) on a set \(S\text{,}\) for each \(x\in S\) we define the <em class="terminology">equivalence class of \(x\) under \(\sim\)</em> to be</p>
+\begin{equation*}
+[x]=\{y\in S\,:\, y\sim x\}.
+\end{equation*}
+<p id="p-990">These sets \([x]\) (\(x\in S\)) are called the <em class="terminology">equivalence classes of \(S\) under \(\sim\)</em>.</p></article><article class="remark-like" id="remark-36"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">7.1.10</span>
+</h5>
+<p id="p-991">Note that, by reflexivity of \(\sim\text{,}\) \(x\in [x]\) for every \(x\in S\text{.}\)</p></article><p id="p-992">We have now the following Very Important Lemma:</p>
+<article class="theorem-like" id="vil_lem"><h5 class="heading">
+<span class="type">Lemma</span><span class="codenumber">7.1.11</span>
+</h5>
+<p id="p-993">Let \(\sim\) be an equivalence relation on set \(S\text{.}\) Then for \(x,y\in S\text{,}\) the following are equivalent: </p>
+<ol id="ol-93" style="list-style-type: decimal;">
+<li id="li-399"><p id="p-994">\(y\in [x]\text{;}\)</p></li>
+<li id="li-400"><p id="p-995">\([x]=[y]\text{;}\)</p></li>
+<li id="li-401"><p id="p-996">\(x\in [y]\text{.}\)</p></li>
+</ol></article><div class="posterior">
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-39" id="proof-39"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></div>
+<div id="hk-proof-39" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-997">To prove that the first and second statements are equivalent: Let \(x, y\in S\text{.}\) If \(y\in
+[x]\text{,}\) then \(y \sim x\text{,}\) so for every \(z\in [y]\) (that is, for every \(z\) in \(S\) with \(z\sim y\)), we have, by transitivity, \(z\sim x\text{,}\) so \(z\in [x]\text{.}\) On the other hand, by the symmetry of \(\sim\) we have \(x\sim y\text{;}\) so for every \(z\in [x]\text{,}\) we have, again by transitivity, that \(z\in [y]\text{.}\) Thus, \([x]=[y]\text{.}\) Conversely, if \([x]=[y]\text{,}\) then since \(y\in [y]=[x]\text{.}\)</p>
+<p id="p-998">The proof that the second and third statements are equivalent is nearly identical.</p></article></div>
+</div>
+<article class="definition-like" id="definition-60"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">7.1.12</span>
+</h5>
+<p id="p-999">In many cases there are many distinct elements \(x,y\in S\) with \([x]=[y]\text{;}\) thus, there are usually many different ways we could denote a particular equivalence class of \(S\) under \(\sim\text{.}\) Element \(y\in S\) is called a <em class="terminology">representative</em> of class \(X\) if \(y\in X\text{.}\)</p></article><article class="example-like" id="example-67"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.1.13</span>
+</h5>
+<p id="p-1000"></p>
+<ol id="ol-94" style="list-style-type: decimal;">
+<li id="li-402"><p id="p-1001">Consider the equivalence relation \(\equiv_2\) on \(\Z\text{.}\)  Under this relation, \([0]=\{0,\pm 2, \pm 4, \ldots\}\) and \([1]=\{\ldots, -3, -1, 1, 3, \ldots\}\text{;}\) in fact, if we let \(E\) be the set of all even integers and \(O\) the set of all odd integers, then for \(x\in \Z\text{,}\) \([x]=E\) if \(x\) is even and \(O\) if \(x\) is odd. Thus, the set of all equivalence classes of \(\Z\) under \(\equiv_2\) is the 2-element set \(\{E,O\}\text{:}\) every even integer is a representative of \(E\text{,}\) while every odd integer is a representative of \(O\text{.}\)</p></li>
+<li id="li-403"><p id="p-1002">For \(f\in C^1\text{,}\) the equivalence class of \(f\) under \(R\) (defined above) is the set of all functions in \(C^1\) of the form \(g(x)=f(x)+c\text{,}\) where \(c\in \R\text{.}\)</p></li>
+<li id="li-404">
+<p id="p-1003">Let \(A=\{a,b,c\}\text{,}\) and define \(\sim\) on the power set \(P(A)\) of \(A\) by \(X\sim Y\) if and only if \(|X|=|Y|\text{.}\) It is straightforward to show that \(\sim\) is an equivalence relation on \(P(A)\text{,}\) under which \(P(A)\) has exactly 4 distinct equivalence classes:</p>
+\begin{equation*}
+[\emptyset]=\{\emptyset\},
+\end{equation*}
+
+\begin{equation*}
+[\{a\}]=[\{b\}]=[\{c\}]=\{\{a\},\{b\}, \{c\}\},
+\end{equation*}
+
+\begin{equation*}
+[\{a,b\}]=[\{a,c\}]=[\{b,c\}]=\{\{a,b\},\{a,c\},\{b,c\}\}, \text{ and }
+\end{equation*}
+
+\begin{equation*}
+[A]=\{A\}.
+\end{equation*}
+</li>
+</ol></article><article class="remark-like" id="remark-37"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">7.1.14</span>
+</h5>
+<p id="p-1004">Notice that the complete set \(\{E,O\}\) of distinct equivalence classes of \(\Z\) under \(\equiv_n\) is a partition of \(\Z\text{,}\) and the complete set</p>
+\begin{equation*}
+\{[\emptyset],[\{a\}],[\{a,b\}],[A]\}
+\end{equation*}
+<p>of distinct equivalence classes of \(P(A)\) under \(\sim\) is a partition of \(P(A)\text{.}\) This is not a coincidence! It turns out that equivalence relations and partitions go hand in hand.</p></article><article class="theorem-like" id="part_quiv"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">7.1.15</span>
+</h5>
+<p id="p-1005">Let \(S\) be a set. Then: </p>
+<ol id="ol-95" style="list-style-type: decimal;">
+<li id="li-405"><p id="p-1006">If \(\sim\) is an equivalence relation on \(S\text{,}\) then the set of all equivalence classes of \(S\) under \(\sim\) is a partition of \(S\text{;}\) and</p></li>
+<li id="li-406"><p id="p-1007">If \(P\) is a partition of \(S\text{,}\) then the relation on \(S\) defined by \(x\sim y\) if and only \(x\) is in the same cell of \(P\) as \(y\) is an equivalence relation on \(S\text{.}\)</p></li>
+</ol>
+<p id="p-1008">Notice that in each case, the cells of the partition are the equivalence classes of the set under the corresponding equivalence relation.</p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-40" id="proof-40"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-40" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-1009">To prove the first statement: Let \(\sim\) be an equivalence relation on \(S\text{.}\) Clearly, the equivalence classes of \(S\) under \(\sim\) are nonempty sets whose union is \(S\text{.}\) Thus, it suffices to show \(X
+\cap Y =\emptyset\) for each pair of equivalence classes \(X\neq
+Y\) of \(S\) under \(\sim\text{.}\) Let \(X,Y\) be equivalence classes of \(S\) under \(\sim\) that are NOT disjoint. Then there exists an element \(z\in X\cap Y\text{.}\) Then by Lemma 7.1.11, \([z]=X\) and \([z]=Y\text{;}\) so \(X=Y\text{.}\) Thus, if \(X\neq Y\text{,}\) then \(X\cap Y
+=\emptyset\text{.}\)</p>
+<p id="p-1010">Finally, it is straightforward (almost silly!) to prove that \(\sim\) is reflexive, symmetric, and transitive.</p></article></span>
+</div>
+<article class="example-like" id="example-68"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.1.16</span>
+</h5>
+<p id="p-1011"></p>
+<ol id="ol-96" style="list-style-type: decimal;"><li id="li-407"><p id="p-1012">For \(n\in \Z^+\text{,}\) the set of the equivalence classes of \(\Z\) under \(\equiv_n\) is the partition \(\{[0],[1],\ldots,[n-1]\}\) of \(\Z\text{.}\) (The partition \(\{E
+,O\}\) of \(\Z\) discussed above is this partition when \(n=2\text{.}\))</p></li></ol></article></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>

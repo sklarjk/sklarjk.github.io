@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2018-11-03T08:39:45-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Examples of groups/nongroups, Part II</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\def\Z{\mathbb{Z}}
+\def\zn{\mathbb{Z}_n}
+\def\znc{\mathbb{Z}_n^\times}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\C{\mathbb{C}}
+\def\N{\mathbb{N}}
+\def\M{\mathbb{M}}
+\def\G{\mathcal{G}}
+\def\0{\mathbf 0}
+\def\Gdot{\langle G, \cdot\,\rangle}
+\def\phibar{\overline{\phi}}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\Ker}{Ker}
+\def\siml{\sim_L}
+\def\simr{\sim_R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="fsaa.html"><span class="title">First-Semester Abstract Algebra</span><span class="subtitle">A Structural Approach</span></a></h1>
+<p class="byline">Jessica K. Sklar</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="gpconvs.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="gps.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="summariesofgps.html" title="Next" alt="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="gpconvs.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="gps.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="summariesofgps.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+<h2 class="link"><a href="pre.html" data-scroll="pre"><span class="codenumber">1</span><span class="title">Preliminaries</span></a></h2>
+<ul>
+<li><a href="sets.html" data-scroll="sets">Sets</a></li>
+<li><a href="funcs.html" data-scroll="funcs">Functions</a></li>
+<li><a href="card.html" data-scroll="card">Cardinality</a></li>
+<li><a href="exercises-1.html" data-scroll="exercises-1">Exercises</a></li>
+</ul>
+<h2 class="link active"><a href="gps.html" data-scroll="gps"><span class="codenumber">2</span><span class="title">Groups</span></a></h2>
+<ul>
+<li><a href="binops.html" data-scroll="binops">Binary operations and structures</a></li>
+<li><a href="exercises-2.html" data-scroll="exercises-2">Exercises, Part I</a></li>
+<li><a href="gpdef.html" data-scroll="gpdef">The definition of a group</a></li>
+<li><a href="gpexs1.html" data-scroll="gpexs1">Examples of groups/nongroups, Part I</a></li>
+<li><a href="gpconvs.html" data-scroll="gpconvs">Group conventions and properties</a></li>
+<li><a href="gpexs2.html" data-scroll="gpexs2" class="active">Examples of groups/nongroups, Part II</a></li>
+<li><a href="summariesofgps.html" data-scroll="summariesofgps">Summaries of groups we've seen</a></li>
+<li><a href="exercises-3.html" data-scroll="exercises-3">Exercises, Part II</a></li>
+</ul>
+<h2 class="link"><a href="homoiso.html" data-scroll="homoiso"><span class="codenumber">3</span><span class="title">Homomorphisms and Isomorphisms</span></a></h2>
+<ul>
+<li><a href="smallordergps.html" data-scroll="smallordergps">Groups of small order</a></li>
+<li><a href="homosandisos.html" data-scroll="homosandisos">Definitions of Homomorphisms and Isomorphisms</a></li>
+<li><a href="isomorphicgps.html" data-scroll="isomorphicgps">Isomorphic groups</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="subgps.html" data-scroll="subgps"><span class="codenumber">4</span><span class="title">Subgroups</span></a></h2>
+<ul>
+<li><a href="subgpsintro.html" data-scroll="subgpsintro">Introduction to subgroups</a></li>
+<li><a href="subgppfsandlattices.html" data-scroll="subgppfsandlattices">Subgroup proofs and lattices</a></li>
+<li><a href="exercises-5.html" data-scroll="exercises-5">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="cyc.html" data-scroll="cyc"><span class="codenumber">5</span><span class="title">Cyclic Groups</span></a></h2>
+<ul>
+<li><a href="cycintro.html" data-scroll="cycintro">Introduction to cyclic groups</a></li>
+<li><a href="section-16.html" data-scroll="section-16">The subgroup lattices of cyclic groups</a></li>
+<li><a href="exercises-6.html" data-scroll="exercises-6">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="perm.html" data-scroll="perm"><span class="codenumber">6</span><span class="title">Permutation and Dihedral Groups</span></a></h2>
+<ul>
+<li><a href="permutationgps.html" data-scroll="permutationgps">Introduction to permutation groups</a></li>
+<li><a href="section-18.html" data-scroll="section-18">Symmetric groups</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Alternating groups</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Cayley's Theorem</a></li>
+<li><a href="dihedralgps.html" data-scroll="dihedralgps">Dihedral groups</a></li>
+<li><a href="exercises-7.html" data-scroll="exercises-7">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="coslag.html" data-scroll="coslag"><span class="codenumber">7</span><span class="title">The Wonderful World of Cosets</span></a></h2>
+<ul>
+<li><a href="section-22.html" data-scroll="section-22">Partitions of and equivalence relations on sets</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Introduction to cosets and normal subgroups</a></li>
+<li><a href="section-24.html" data-scroll="section-24">The index of a subgroup and Lagrange's Theorem</a></li>
+<li><a href="exercises-8.html" data-scroll="exercises-8">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="factorgps.html" data-scroll="factorgps"><span class="codenumber">8</span><span class="title">Factor Groups</span></a></h2>
+<ul>
+<li><a href="section-25.html" data-scroll="section-25">Motivation</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Focusing on normal subgroups</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Introduction to factor groups</a></li>
+<li><a href="exercises-9.html" data-scroll="exercises-9">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="isothms.html" data-scroll="isothms"><span class="codenumber">9</span><span class="title">The Isomorphism Theorems</span></a></h2>
+<ul>
+<li><a href="section-28.html" data-scroll="section-28">The First Isomorphism Theorem</a></li>
+<li><a href="section-29.html" data-scroll="section-29">The Second and Third Isomorphism Theorems</a></li>
+<li><a href="exercises-10.html" data-scroll="exercises-10">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
+<li><a href="appendix-2.html" data-scroll="appendix-2">Solutions to Exercises</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="references-1.html" data-scroll="references-1">Bibliography</a></li>
+<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="gpexs2"><header title="Section 2.6 Examples of groups/nongroups, Part II"><h1 class="heading hide-type" alt="Section 2.6 Examples of groups/nongroups, Part II">
+<span class="type">Section</span><span class="codenumber">2.6</span><span class="title">Examples of groups/nongroups, Part II</span><a href="gpexs2.html" class="permalink">¶ permalink</a>
+</h1></header><article class="example-like" id="example-16"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">2.6.1</span>
+</h5>
+<p id="p-281"> Let \(n\in \Z^+\text{.}\) We define \(n\Z\) by</p>
+\begin{equation*}
+n\Z=\{nx: x\in \Z\}:
+\end{equation*}
+<p>that is, \(n\Z\) is the set of all (integer) multiples of \(n\text{.}\)</p></article><article class="theorem-like" id="nz"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">2.6.2</span>
+</h5>
+<p id="p-282">\(n\Z\) is a group under \(+\) (the usual addition of integers).</p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-13" id="proof-13"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-13" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-283">Let \(x, y\in n\Z\text{.}\) Then there exist \(a,b\in \Z\) such that \(x=na\) and \(y=nb\text{.}\) Then \(x+y=na+nb=n(a+b)\in n\Z\text{.}\) So \(\langle n\Z,+\rangle\) is a binary structure. The remainder of the proof is left as an exercise for the reader.</p></article></span>
+</div>
+<article class="remark-like" id="remark-12"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">2.6.3</span>
+</h5>
+<p id="p-284">When we are discussing a group \(n\Z\text{,}\) assume that \(n\in \Z^+\text{,}\) unless otherwise noted.</p></article><p id="p-285">We use an example from our next class of groups all the time; in fact, most six-year-olds do as well, since it is used when telling time! Before we get to the example, we need some more definitions and some notation. Throughout the following discussion, assume \(n\) is a fixed positive integer.</p>
+<article class="definition-like" id="definition-24"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">2.6.4</span>
+</h5>
+<p id="p-286">We say integers \(a\) and \(b\) are <em class="terminology">congruent modulo [or mod] \(n\)</em> if \(n\) divides \(a-b\text{.}\) If \(a\) and \(b\) are congruent mod \(n\text{,}\) we write \(a \equiv_n b\text{.}\)</p></article><article class="example-like" id="cong_ex"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">2.6.5</span>
+</h5>
+<p id="p-287">\(1, 7, 13,\) and \(-5\) are all congruent mod \(6\text{.}\)</p></article><p id="p-288">The following is a profoundly useful theorem; it's so important, it has a special name. We omit the proof of this theorem, but direct interested readers to for, instance, p. 5 in [3].</p>
+<article class="theorem-like" id="divalg"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">2.6.6</span><span class="title">Division Algorithm</span>
+</h5>
+<p id="p-289">Let \(n\in \Z^+\) and let \(a\) be any integer. Then there exist unique integers \(q\) and \(r\text{,}\) with \(0\leq
+r \lt n\text{,}\) such that \(a=qn+r\text{.}\)</p>
+<p id="p-290">(This is actually a special case of a more general theorem, which states that given any integers \(n\) and \(a\text{,}\) there exist unique integers \(q\) and \(r\text{,}\) with \(0\leq
+r\lt |n|\text{,}\) such that \(a=qn+r\text{.}\))</p></article><p id="p-291">It follows that for each positive integer \(n\) and integer \(a\text{,}\) there exists a unique element \(R_n(a)\) (the \(r\) in the above theorem) of the set \(\{0,1,2,\ldots, n-1\}\) such that \(a\) is congruent to \(R_n(a)\) modulo \(n\text{.}\) For example, \(R_3(4)=1\text{,}\) \(R_3(0)=0\text{,}\) \(R_3(17)=2\text{,}\) and \(R_3(-5)=1\text{.}\)</p>
+<article class="definition-like" id="definition-25"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">2.6.7</span>
+</h5>
+<p id="p-292">\(R_n(a)\) is the <em class="terminology">remainder</em> when we divide \(a\) by \(n\text{.}\) (Note: You were probably already familiar with the remainder when you divide a positive integer by \(n\text{.}\))</p></article><article class="definition-like" id="definition-26"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">2.6.8</span>
+</h5>
+<p id="p-293">We define <em class="terminology">addition modulo \(n\)</em>, \(+_n\text{,}\) on \(\Z\) by, for all \(a,b\in \Z\text{,}\)</p>
+\begin{equation*}
+a+_n b=R_n(a+b),
+\end{equation*}
+<p>that is, the unique element of \(\{0,1,\ldots, n-1\}\) that's congruent to the integer \(a+b\) modulo \(n\text{.}\)</p></article><article class="remark-like" id="remark-13"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">2.6.9</span>
+</h5>
+<p id="p-294">Addition mod 24 is what we use to tell time!</p></article><p id="p-295">The set \(\{0,1,2,\ldots, n-1\}\) of remainders when dividing by \(n\) is so important we give it a special notation.</p>
+<article class="definition-like" id="definition-27"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">2.6.10</span>
+</h5>
+<p id="p-296">We define \(\Z_n\) to be the set \(\{0,1,2,\ldots,n-1\}\text{.}\)</p></article><article class="remark-like" id="warning-10"><h5 class="heading">
+<span class="type">Warning</span><span class="codenumber">2.6.11</span>
+</h5>
+<p id="p-297">Note that by our definition of \(\Z_n\text{,}\) the integer \(n\) itself is <!--Style me with CSS--><em>not</em> in \(\Z_n\text{!}\)</p></article><p id="p-298">We are now ready to consider our next type of group.</p>
+<article class="example-like" id="example-18"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">2.6.12</span>
+</h5>
+<p id="p-299"> For each \(n\in \Z^+\text{,}\) \(\langle \Z_n,+_n\rangle\) is a group, called the <!--Style me with CSS--><em>cyclic group of order \(n\)</em> (we will see later why we use the word “cyclic” here). This group is abelian and of order \(n\text{.}\)</p></article><div class="posterior">
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-14" id="proof-14"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></div>
+<div id="hk-proof-14" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-300">We first check that \(\langle\Z_n,+_n\rangle\) is a binary structure. Note that by the definition of \(+_n\text{,}\) \(a+_nb \in \Z_n\) for each \(a,b\in \Z\text{.}\) Thus, \(a+_nb \in \Z_n\) for each \(a,b\in \Z_n\text{.}\)</p>
+<p id="p-301">We next check that \(\Z_n\) under \(+_n\) satisfies the three group axioms. Note that since addition is commutative on \(\Z\text{,}\)</p>
+\begin{equation*}
+a+_n b =R_n(a+b)=R_n(b+a)=b+_n a
+\end{equation*}
+<p>for all \(a,b\in \Z_n\text{.}\) Again, a simpler way of stating this is that commutativity of \(+_n\) on \(\Z_n\) is inherited from the commutativity of addition on \(\Z\text{.}\) One nice result of this is that since \(+_n\) is commutative on \(\Z_n\text{,}\) we have less to check when verifying group axioms \(\G_2\) and \(\G_3\text{.}\)</p>
+<p id="p-302">Now, let \(a,b,c\in \Z_n\text{.}\)  We want to show that \((a+_n b)+_n c = a +_n(b+_n c)\text{.}\) Now,</p>
+\begin{align*}
+(a+_n b)+_n c\amp =R_n(a+b)+_n c\\
+\amp \equiv_n R_n(a+b)+c\\\
+\amp \equiv_n (a+b)+c\\\
+\amp \equiv_n a+(b+c)\\
+\amp \equiv_n a+R_n(b+c)\\
+\amp \equiv_n a+_n (b+_n c).
+\end{align*}
+<p>So \((a+_n b)+_n c\) and \(a+_n (b+_n c)\) are congruent mod \(n\text{.}\)  Since both of these values are in \(\{0,1,\ldots, n-1\}\text{,}\) this implies that they are equal, as desired.</p>
+<p id="p-303">Next, clearly, \(0\in \Z_n\) acts as an identity element under \(+_n\text{,}\) since</p>
+\begin{equation*}
+0+_n a =R_n(0+a)=R_n(a)
+\end{equation*}
+<p>for each \(a\in \Z_n\text{.}\)</p>
+<p id="p-304">Finally, let \(a\in \Z_n\text{.}\)  If \(a=0\text{,}\) then clearly \(a\) has inverse \(0\in \Z_n\) since \(0+_n 0 = 0\text{.}\) If \(a\neq 0\text{,}\) then the element \(n-a\in \Z_n\) is an inverse for \(a\) since</p>
+\begin{equation*}
+a+_n(n-a)=R_n(a+(n-a))=R_n(n)=0.
+\end{equation*}
+<p id="p-305">Since \(+_n\) is commutative on \(\Z_n\text{,}\) \(\Z_n\) is an abelian group under \(+_n\text{.}\)</p>
+<p id="p-306">Finally, we already know that \(|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n\text{.}\)</p></article></div>
+</div>
+<article class="remark-like" id="remark-14"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">2.6.13</span>
+</h5>
+<p id="p-307">In practice, we often omit the subscript \(n\) and just write \(+\) when discussing addition modulo \(n\) on \(\Z_n\text{.}\)</p></article><article class="remark-like" id="warning-11"><h5 class="heading">
+<span class="type">Warning</span><span class="codenumber">2.6.14</span>
+</h5>
+<p id="p-308">Do not confuse \(n\Z\) and \(\Z_n\text{!}\) They are very different as sets and as groups.</p></article><article class="example-like" id="example-19"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">2.6.15</span>
+</h5>
+<p id="p-309">In the group \(\langle \Z_8,+\rangle\) (where, as indicated by our above remark, \(+\) means addition modulo \(8\)), we have, for instance, \(3+7=2\) and \(7+7=6\text{.}\) The numbers 2 and 6 are each other's inverse, and \(7^{-1}=1\text{.}\) The number \(0\) has inverse \(0\) (it can't be \(8\text{,}\) since \(8\not\in \Z_8\text{!}\)).</p></article><article class="definition-like" id="definition-28"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">2.6.16</span>
+</h5>
+<p id="p-310">For \(n\in \Z^+\text{,}\) we define <em class="terminology">multiplication modulo \(n\)</em>, denoted \(\cdot_n\text{,}\) on \(\Z_n\) by \(a\cdot_n b = R_n(ab)\text{,}\) the remainder when \(ab\) is divided by \(n\text{.}\)</p></article><article class="remark-like" id="remark-15"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">2.6.17</span>
+</h5>
+<p id="p-311">\(\Z_n\) is never a group under \(\cdot_n\) (do you see why?).</p></article><p id="p-312">But we can consider the following</p>
+<article class="definition-like" id="definition-29"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">2.6.18</span>
+</h5>
+<p id="p-313">For \(n\in \Z^+\text{,}\) we define \(\Z_n^{\times}\) to be the set</p>
+\begin{equation*}
+\{a\in \Z_n\,:\,\gcd(a,n)=1\}\text{.}
+\end{equation*}
+</article><article class="example-like" id="example-20"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">2.6.19</span>
+</h5>
+<p id="p-314">\(\langle \Z_n^{\times},\,\cdot_n\, \rangle\) is a group under multiplication. We omit the proof.</p></article><p id="p-315">We end this section by considering a few more examples.</p>
+<article class="example-like" id="funcrr"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">2.6.20</span>
+</h5>
+<p id="p-316"> Let \(F\) be the set of all functions from \(\R\) to \(\R\text{,}\) and define <!--Style me with CSS--><em>pointwise addition</em> \(+\) on \(F\) by</p>
+\begin{equation*}
+(f+g)(x)=f(x)+g(x)
+\end{equation*}
+<p>for all \(f,g\in F\) and \(x\in \R\text{.}\) We claim that \(F\) is a group under pointwise addition. (For variety, in this proof we don't explicitly refer to \(\G_1\)–\(\G_3\text{,}\) though we certainly do verify they hold.)</p></article><div class="posterior">
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-15" id="proof-15"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></div>
+<div id="hk-proof-15" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-317">If \(f,g\in F\) then clearly \(f+g\) is also a function from \(\R\) to \(\R\text{,}\) so \(\langle F,+\rangle\) is a binary structure.</p>
+<p id="p-318">Next, let \(f,g,h\in F\text{.}\) Then for all \(x\in \R\text{,}\)</p>
+\begin{align*}
+((f+g)+h)(x)\amp =(f+g)(x)+h(x)\amp \amp\\
+\amp =((f(x)+g(x))+h(x)\amp \amp\\
+\amp =f(x)+(g(x)+h(x))\amp \amp \text{ (since addition is associative on
+\(\R\)) }\\
+\amp =f(x)+(g+h)(x)\amp \amp\\
+\amp =(f+(g+h))(x)\amp \amp .
+\end{align*}
+<p id="p-319">Note that the key fact used in this argument is that \(f(x)\text{,}\) \(g(x)\) and \(h(x)\) all lie in \(\R\text{,}\) and addition is associative on \(\R\text{.}\) When you get used to such arguments, it is sufficient to say that associativity of \(+\) on \(F\) is <!--Style me with CSS--><em>inherited</em> from the associativity of addition on \(\R\text{.}\)</p>
+<p id="p-320">Next, let \(z:\R\to\R\) be the function \(z(x)=0\) for all \(x\text{.}\) Then for all \(f\in F\) and \(x\in \R\text{,}\)</p>
+\begin{align*}
+(f+z)(x)\amp =f(x)+z(x)\amp \amp\\
+\amp =f(x)+0\amp \amp\\
+\amp =f(x)\amp \amp \\
+\amp =0+f(x)\amp \amp\\
+\amp =z(x)+f(x)\amp \amp\\
+\amp = (z+f)(x).
+\end{align*}
+<p id="p-321">So \(z\) is an identity element of \(\langle F,+\rangle\text{.}\)</p>
+<p id="p-322">Finally, let \(f\in F\text{,}\) and define \(g\in F\) by \(g(x)=-f(x)\) for all \(x\in \R\text{.}\) It is easy then to see that \(g\) is an inverse for \(f\) in \(F\text{.}\)</p>
+<p id="p-323">Hence, \(F\) is a group under pointwise addition. Note that it is uncountably infinite and abelian.</p></article></div>
+</div>
+<article class="example-like" id="bijrr"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">2.6.21</span>
+</h5>
+<p id="p-324"> The set \(F\) is <!--Style me with CSS--><em>not</em> a group under function composition (do you see why?). But if we define \(B\) to be the set of all <!--Style me with CSS--><em>bijections</em> from \(\R\) to \(\R\text{,}\) then \(B\) is a group under function composition. (Prove it!) \(B\) is uncountably infinite and nonabelian.</p></article><article class="example-like" id="gpprod"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">2.6.22</span>
+</h5>
+<p id="p-325">Let \(\langle G_1,*_1\rangle\text{,}\) \(\langle G_2,*_2\rangle\) , \(\ldots\text{,}\) \(\langle G_n,*_n\rangle\) be groups (\(n\in \Z^+\)). Then the <!--Style me with CSS--><em>group product</em></p>
+\begin{equation*}
+G=G_1\times G_2\times \cdots \times G_n
+\end{equation*}
+<p>is a group under the <!--Style me with CSS--><em>componentwise</em> operation \(*\) defined by</p>
+\begin{equation*}
+(g_1,g_2,\ldots, g_n)*(h_1,h_2,\ldots,h_n)=(g_1*_1h_1, g_2*_2h_2,\ldots, g_n*_nh_n)
+\end{equation*}
+<p>for all \((g_1,g_2,\ldots, g_n),(h_1,h_2,\ldots,h_n)\in G\text{.}\)</p>
+<p id="p-326">For instance, considering multiplication on \(\R^*\text{,}\) matrix multiplication on \(GL(2,\R)\text{,}\) and addition modulo \(6\) on \(\Z_6\text{,}\) we have that \(\langle \R^*\times GL(2,\R) \times \Z_6,*\rangle\) is a group in which, for instance,</p>
+\begin{equation*}
+\left(-1, \begin{bmatrix}
+1 \amp  \phantom{-}3 \\
+0 \amp  -1
+\end{bmatrix},
+3\right)
+*\left(\pi,
+\begin{bmatrix}
+2 \amp  1 \\
+1 \amp  1
+\end{bmatrix},
+4\right)=\left(-\pi, 
+\begin{bmatrix}
+\phantom{-}5 \amp  \phantom{-}4 \\
+-1 \amp -1
+\end{bmatrix} 
+,1\right).
+\end{equation*}
+</article><article class="example-like" id="example-24"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">2.6.23</span>
+</h5>
+<p id="p-327">A common example of a group product is the group \(\Z_2^2\text{,}\) equipped with componentwise addition modulo 2.</p></article><article class="definition-like" id="definition-30"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">2.6.24</span>
+</h5>
+<p id="p-328">The group \(\Z_2^2\) is known as the <em class="terminology">Klein 4-group</em>. (Felix Klein was a German mathematician; you may have heard of him in relation to the Klein Bottle.) The group \(\Z_2^2\) is sometimes denoted by \(V\text{,}\) which stands for “Vierergruppe,” the German word for “four-group”.</p></article></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>
